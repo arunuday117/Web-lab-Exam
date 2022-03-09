@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE EXAM</title>
+    <style>
+        body {
+            background-color: #d4d6d775;
+            color: #fff;
+        }
+        
+        .container {
+            display: block;
+            border-radius: 20px;
+            background-color: rgb(4 4 4 / 40%);
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        h3.exam-heading {
+            text-align: center;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        ul {
+            float: right;
+            display: block;
+            color: #b70808;
+        }
+        
+        label {
+            display: block;
+            padding-left: 40px;
+            padding-bottom: 10px;
+        }
+        
+        .input-field {
+            display: block;
+            padding-left: 100px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        
+        .button {
+            text-align: center;
+        }
+        
+        input[type="submit"] {
+            width: 100px;
+            height: 40px;
+            border: 0px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            color: #FFF;
+            background-color: #b70808;
+        }
+        
+        div.result {
+            margin-left: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="exam-heading">
+            Online Examination
+        </h3>
+        <ul>
+            <li>1 mark for each correct answer</li>
+            <li>No negative mark</li>
+        </ul>
+        <!-- <form action="" name="online_exam"> -->
+        <div class="input_form">
+            <label>1. Who developed HTML?</label>
+            <div class="input-field">
+                <input type="radio" name="dhtml" id="1" value="Brandon Eich">Brandon Eich
+                <input type="radio" name="dhtml" id="2" value="James Gosling">James Gosling
+                <input type="radio" name="dhtml" id="3" value="Rasmus Lerdoff">Rasmus Lerdoff
+                <input type="radio" name="dhtml" id="4" value="Tim Berner's Lee">Tim Berner's Lee
+            </div>
+        </div>
+        <div class="input_form">
+            <label>2. Who developed PHP?</label>
+            <div class="input-field">
+                <input type="radio" name="dphp" id="7" value="Rasmus Lerdoff">Rasmus Lerdoff
+                <input type="radio" name="dphp" id="5" value="Brandon Eich">Brandon Eich
+                <input type="radio" name="dphp" id="6" value="James Gosling">James Gosling
+                <input type="radio" name="dphp" id="8" value="Tim Berner's Lee">Tim Berner's Lee
+            </div>
+        </div>
+        <div class="input_form">
+            <label>3. When HTML is first released?</label>
+            <div class="input-field">
+                <input type="radio" name="rhtml" id="9" value="1994">1994
+                <input type="radio" name="rhtml" id="10" value="1995">1995
+                <input type="radio" name="rhtml" id="11" value="1993">1993
+                <input type="radio" name="rhtml" id="12" value="1996">1996
+            </div>
+        </div>
+        <div class="input_form">
+            <label>4. Object Oriented Concepts (*select all correct answers)</label>
+            <div class="input-field">
+                <input type="checkbox" name="oops" id="13" value="Encapsulation">Encapsulation
+                <input type="checkbox" name="oops" id="14" value="Inheritance">Inheritace
+                <input type="checkbox" name="oops" id="15" value="Plagarism">Plagarism
+                <input type="checkbox" name="oops" id="16" value="Polymorphism">Polymorphism
+            </div>
+        </div>
+        <div class="input_form">
+            <label>5. What is JavaScript?</label>
+            <div class="input-field">
+                <input type="radio" name="js" id="17" value="Server Side Scripting language">Server Side Scripting language
+                <input type="radio" name="js" id="18" value="Programming Language">Programming Language
+                <input type="radio" name="js" id="19" value="Client Side Scripting language">Client Side Scripting language
+                <input type="radio" name="js" id="20" value="Querying Language">Querying Language
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="submit" name="submit" id="sub" onclick="submit();">
+        </div>
+        <div class="result">
+            <p>Result : <span id="result"></span></p>
+        </div>
+        <!-- </form> -->
+    </div>
+    <script>
+        function submit() {
+            var mark = 0;
+            if (document.getElementById("4").checked) {
+                mark++;
+            }
+            if (document.getElementById("7").checked) {
+                mark++;
+            }
+            if (document.getElementById("11").checked) {
+                mark++;
+            }
+            if (document.getElementById("13").checked && document.getElementById("14").checked && document.getElementById("16").checked) {
+                mark++;
+            }
+            if (document.getElementById("17").checked) {
+                mark++;
+            }
+            result.innerHTML = mark;
+        }
+    </script>
+</body>
+
+</html>
